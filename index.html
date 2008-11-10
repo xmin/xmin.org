@@ -5,20 +5,28 @@
                 font: normal 10px/12px Verdana, sans-serif;
                 margin: 0;
                 padding: 40px;
+                background: black url("/_lib/white.gif") top left repeat-y;
             }
             h1 { 
                 font: bold 11px/13px Verdana, sans-serif; 
+                margin: 0;
+                padding: 0;
             }
             .motto {
                 width: 200px;
                 text-align: right;
             }
+
+            #body {
+                position: relative;
+            }
+
             h2 { 
                 font: bold 10px/12px Verdana, sans-serif; 
                 text-transform: uppercase;
                 margin: 7em 0 0;
             }
-            div {
+            #faq {
                 width: 400px;     
             }
             hr {
@@ -40,10 +48,29 @@
                 padding: 0;
             }
 
+            a img {
+                border: 4px solid #CCC;
+                display: block;
+                margin: 0 0 10px;
+                padding: 10px;
+                background: white;
+            }
+
+            #swag {
+                width: 200px;
+                position: absolute;
+                top: 0px;
+                left: 460px;
+            }
+            #swag h2 {
+                color: white;
+                padding: 0 0 20px;
+                margin: 0;
+            }
         </style>
         <link rel="icon" type="image/png" href="favicon.ico"/>
     </head>
-    <body><div>
+    <body>
     
         <h1>Christian Minimalism</h1>
 
@@ -51,7 +78,8 @@
 
         <p class="motto">the Christian alias for <i>humanity</i></p>
 
-
+        <div id="body">
+        <div id="faq">
         <h2>Frequently Asked Questions</h2>
 
         <dl>
@@ -74,10 +102,9 @@
             <dt>Why bother?</dt>
 
             <dd>Individuals are sometimes asked to identify themselves
-            religiously. In such situations, Christian Minimalism is useful to
-            those for whom "Christianity" is too general a category, but who
-            are not comfortable identifying with any more-specified 
-            denomination.</dd>  
+            religiously. Christian Minimalism is useful when "Christian" is too
+            broad an answer, but identifying with other denominations is too
+            specific.</dd>  
 
 
             <dt>Is Christian Minimalism compatible with other denominations?</dt>
@@ -104,13 +131,27 @@
             <dd>To join Christian Minimalism, identify yourself as a Christian
             Minimalist. If you like, use the logo above (also available in <a
                 href="xmin.hi.png">hi-res</a>, <a href="xmin.eps">EPS</a>, <a
-                href="xmin.ai">AI</a>).</dd>
+                href="xmin.ai">AI</a>). You could also buy some <a
+                href="http://www.cafepress.com/xmin_org">swag</a> (there's no
+            mark-up).</dd>
 
         </dl>
 
         <p>More questions? <a href="mailto:questions@xmin.org">Email us</a>.</p>
 
     </div>
+
+    <div id="swag">
+<!--
+        <h2>Swag</h2>
+
+        <a href="http://www.cafepress.com/xmin_org.299867788"><img src="_lib/boxers.jpg" alt="boxers" /></a>
+        <a href="http://www.cafepress.com/xmin_org.299867787"><img src="_lib/thong.jpg" alt="thong" /></a>
+        <a href="http://www.cafepress.com/xmin_org.299867786"><img src="_lib/stein.jpg" alt="stein" /></a>
+        -->
+    </div>
+    </div>
+
 
     <script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
