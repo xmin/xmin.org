@@ -1,11 +1,3 @@
-import twitter
-
-searcher = twitter.Twitter(domain="search.twitter.com")
-feed = []
-for result in searcher.search(q='#xmin')['results']:
-    feed.append('<div class="tweet">%(text)s <span class="twitterer">{<a href="http://twitter.com/%(from_user)s/status/%(id)s">%(from_user)s</a>}</span></div>' % result)
-feed = ''.join(feed)
-
 <h2>http://twitter.com/search?q=#xmin</h2>
 
 <div id="feed">

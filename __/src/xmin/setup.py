@@ -5,4 +5,4 @@ setup( name='xmin.org'
      , author='Chad Whitacre'
      , py_modules=['xmin']
      , install_requires=['twitter == 1.4.2']
-)
+      )
