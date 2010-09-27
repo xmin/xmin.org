@@ -10,7 +10,6 @@
                 var parts = window.location.href.split('/');
                 parts = [''].concat(parts.slice(3));
                 var relurl = parts.join('/');
-                console.log(parts, relurl);
                 $('A[href='+relurl+']').addClass('current');
             });
         </script>
