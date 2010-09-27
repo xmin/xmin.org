@@ -12,7 +12,7 @@ aspen.restarter.track(TMPL)
 TMPL = open(TMPL).read()
 
 LINK = r"""<a title="Search #xmin on Twitter"
-              href="http://twitter.com/search?q=#xmin">\1</a>"""
+              href="http://twitter.com/#search?q=%23xmin">\1</a>"""
 TWEET = """\
     %(text)s
     <span class="citation">&mdash;
