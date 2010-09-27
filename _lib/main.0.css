@@ -1,11 +1,8 @@
 BODY {
     margin: 0;
     padding: 0;
-    background: #F1E7D3 url("/bg.png") repeat;
+    background: #F1E7D3 url("/_lib/bg.png") top center no-repeat;
     color: #00004A;
-}
-#bghack {
-    background: url("/bg2.png") 220px -40px no-repeat;
 }
 #body {
     width: 400px;
@@ -94,4 +91,10 @@ BLOCKQUOTE .citation {
     color: #AAA18E;
     margin: 0;
     padding: 4em 0 0;
+}
+#tweet A {
+    color: #AAA18E;
+}
+#tweet A:hover {
+    color: #26614F;
 }
