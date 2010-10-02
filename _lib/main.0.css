@@ -53,13 +53,12 @@ BODY {
 #nav A:hover {
     color: #26614F;
 }
+#content {
+    font: normal 12pt/14pt Georgia, serif;
+}
 #content H2 {
     font: normal 18pt/24pt Georgia, serif;
     color: #AAA18E;
-}
-#content {
-    font-size: 12pt;
-    line-height: 14pt;
 }
 #content P {
     text-indent: 1em;
@@ -84,7 +83,7 @@ BLOCKQUOTE .citation {
     height: 0;
 }
 .sig {
-    padding-left: 280px;
+    padding-left: 260px;
     font-style: italic;
 }
 #tweet {
