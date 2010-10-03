@@ -8,6 +8,10 @@ BODY {
     width: 400px;
     margin: 40px auto;
 }
+#top {
+    position: relative;
+    z-index: 2;
+}
 #top P {
     font: 18pt/24pt Georgia, serif;
     margin: 1em 0;

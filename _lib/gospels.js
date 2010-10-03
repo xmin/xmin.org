@@ -7,7 +7,6 @@ $(document).ready(function()
 
     function scrollTo(i)
     {
-        console.log('scrolling to ', i);
         $('S.current').removeClass('current');
 
         var story = $(stories[i]);
@@ -50,9 +49,3 @@ $(document).ready(function()
     random();
 
 });
-/*
-
-
-
-
-*/
