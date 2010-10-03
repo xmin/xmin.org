@@ -86,14 +86,13 @@ BLOCKQUOTE .citation {
     padding-left: 260px;
     font-style: italic;
 }
-#tweet {
-    color: #AAA18E;
-    margin: 0;
-    padding: 4em 0 0;
+
+
+
+#gospel {
+    
 }
-#tweet A {
-    color: #AAA18E;
+#gospels .verse {
+    display: none;
 }
-#tweet A:hover {
-    color: #26614F;
-}
+
