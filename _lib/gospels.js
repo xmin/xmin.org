@@ -12,7 +12,7 @@ $(document).ready(function()
         var scrollTarget = story.offset().top - 100;
         var delta = Math.abs(scrollCurrent - scrollTarget)
         var time = delta / 66.7; // I figured 3 seconds for 200,000 pixels
-        time = Math.max(time, 750); // but make it feel like we're scrolling
+        time = Math.max(time, 500); // but make it feel like we're scrolling
 
         $('html, body').animate({ scrollTop: scrollTarget }, time, function() {
             focus(i);

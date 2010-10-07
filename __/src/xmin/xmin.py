@@ -13,6 +13,7 @@ TMPL = open(TMPL).read()
 
 def webpage(environ, start_response):
     orig = stdlib(environ, start_response)[0]
+    orig = orig.replace('```', '&ldquo;&lsquo;').replace("'''", '&rsquo;&rdquo;')
     orig = orig.replace('``', '&ldquo;').replace("''", '&rdquo;')
     orig = orig.replace('`', '&lsquo;').replace("'", '&rsquo;')
     new = TMPL % orig
