@@ -1,0 +1,166 @@
+BODY {
+    margin: 0;
+    padding: 0;
+    background: #F1E7D3 url("/_lib/bg.png") top center no-repeat;
+    color: #00004A;
+}
+#body {
+    width: 400px;
+    margin: 40px auto;
+}
+#top {
+    position: relative;
+    z-index: 2;
+}
+#top P {
+    font: 18pt/24pt Georgia, serif;
+    margin: 1em 0;
+    padding: 0;
+}
+#top SPAN {
+    color: #AAA18E;
+}
+#top OL {
+    font: normal 24pt/32pt Arial, sans-serif;
+    margin: 0 1em;
+    padding: 0;
+    color: #26614F; /* green */
+}
+#top LI {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#nav {
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 400px;
+}
+#nav TD {
+    text-align: center;
+    border: 1px solid #AAA18E;
+    border-style: solid none;
+    height: 19px;
+}
+#nav A {
+    text-decoration: none;
+    color: #AAA18E;
+    font: normal 12px/12px Arial, sans-serif;
+    padding: 4px;
+}
+#nav A.current {
+    background: #AAA18E;
+    color: #F1E7D3;
+}
+#nav A:hover {
+    color: #26614F;
+}
+#content {
+    font: normal 12pt/14pt Georgia, serif;
+}
+#content H2 {
+    font: normal 18pt/24pt Georgia, serif;
+    color: #AAA18E;
+    margin: 0;
+    padding: 1em 0 0.5em;
+}
+#content P {
+    text-indent: 1em;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+}
+BLOCKQUOTE {
+    font-style: italic;
+    margin: 0 1em;
+    padding: 0;
+    text-indent: 0;
+    text-align: justify;
+}
+BLOCKQUOTE .citation {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    float: right;
+    font-size: smaller;
+}
+.clear {
+    clear: both;
+    height: 0;
+}
+.sig {
+    padding-left: 260px;
+    font-style: italic;
+}
+
+
+#gospels H2 {
+    position: relative;
+    z-index: 2;
+}
+#gospels U { /* verse */
+    display: none;
+}
+#gospels S { /* story */
+    display: block;
+    position: relative;
+    z-index: 0;
+    background: #F1E7D3;
+    text-decoration: none;
+}
+#gospels S.current {
+    z-index: 2;
+}
+
+#gospels #mask {
+    background: #F1E7D3;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+    z-index: 1;
+}
+
+#gospels #controls {
+    font: normal 12pt/14pt "Lucida Console", Monaco, monospace;
+    color: #AAA18E;
+}
+
+#gospels #previous,
+#gospels #next {
+    position: absolute;
+    width: 100px;
+    background: #F1E7D3;
+    z-index: 3;
+}
+#gospels #previous {
+    text-align: right;
+}
+#gospels #next {
+    text-align: left;
+}
+
+#gospels #show {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    z-index: 3;
+    width: 404px;
+    margin-left: -202px;
+    padding: 10px 0;
+    background: #F1E7D3;
+    text-align: center;
+    border-top: 1px solid #AAA18E;
+}
+#gospels #controls SPAN  {
+    color: #AAA18E;
+    cursor: pointer;
+}
+#gospels #controls SPAN:hover {
+    color: #26614F;
+}
