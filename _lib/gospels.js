@@ -109,9 +109,11 @@ $(document).ready(function()
     }
 
 
-    $('#previous').click(previous);
-    $('#next').click(next);
-    $('#random').click(random);
+    $('#previous SPAN:eq(0)').click(random);
+    $('#previous SPAN:eq(1)').click(previous);
+
+    $('#next SPAN:eq(0)').click(next);
+    $('#next SPAN:eq(1)').click(random);
 
     $('#show SPAN:eq(0)').click(one);
     $('#show SPAN:eq(1)').click(all);
