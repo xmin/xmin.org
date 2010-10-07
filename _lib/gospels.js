@@ -7,8 +7,6 @@ $(document).ready(function()
 
     function scrollTo(i)
     {
-        $('S.current').removeClass('current');
-
         var story = $(stories[i]);
         var scrollCurrent = $('body').scrollTop(); // XXX cross-browser?
         var scrollTarget = story.offset().top - 100;
@@ -17,9 +15,25 @@ $(document).ready(function()
         time = Math.max(time, 750); // but make it feel like we're scrolling
 
         $('html, body').animate({ scrollTop: scrollTarget }, time, function() {
-            story.addClass('current');
-            current = i;
+            focus(i);
         });
+    }
+
+    function focus(i)
+    {
+        current = i;
+        
+        $('S.current').removeClass('current');
+        var story = $(stories[i]);
+        story.addClass('current');
+
+        var o = story.offset();
+        $('#previous').css({ top: o.top - 18 
+                           , left: o.left - 120
+                            });
+        $('#next').css({ top: o.top + story.outerHeight(true) - 18
+                       , left: o.left + story.outerWidth(true) + 20
+                        });
     }
   
     function previous()
@@ -40,12 +54,68 @@ $(document).ready(function()
         scrollTo(i);
     }
 
-    $('#controls SPAN:eq(0)').click(previous);
-    $('#controls SPAN:eq(1)').click(next);
-    $('#controls SPAN:eq(2)').click(random);
+    function one()
+    {
+        // Find the current story.
+        // =======================
+        // I adapted a binary search from:
+        //
+        //      http://snippets.dzone.com/posts/show/5989
 
-    $('#mask').show().fadeTo(1000, 0.9);
-    $('#controls').show();
+        var attention = 105; // first line after we scroll to 100px from top
+        var scrolled = $(window).scrollTop();
+        var squish = $('#gospels').offset().top;
+        if (scrolled < squish)
+            attention = (squish - scrolled)
+                      + (Math.ceil(scrolled / squish) * attention);
+        attention += scrolled;
+
+        var story = null;
+        var t, b;
+
+        var low = 0;
+        var mid;
+        var high = stories.length - 1;
+        
+        while (low <= high)
+        {
+            half = Math.ceil((high - low) / 2);
+            mid = low + half;
+           
+            story = $(stories[mid])
+            t = story.offset().top;
+            b = t + story.outerHeight(true);
+            
+            if (t <= attention && attention <= b)   // found it!
+                break;                  
+            if (attention < t)                      // guessed too low
+                high = mid - 1;
+            else                                    // guessed too high
+                low = mid + 1;
+        }
+
+        mask();
+        focus(mid);
+    }
+
+    function all()
+    {
+        $('#mask, #previous, #next').hide();
+    }
+
+    function mask()
+    {
+        $('#mask, #previous, #next').show().fadeTo(1000, 0.9);
+    }
+
+
+    $('#previous').click(previous);
+    $('#next').click(next);
+    $('#random').click(random);
+
+    $('#show SPAN:eq(0)').click(one);
+    $('#show SPAN:eq(1)').click(all);
+
+    mask();
     random();
-
 });
